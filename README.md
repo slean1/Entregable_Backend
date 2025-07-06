@@ -12,7 +12,8 @@ El proyecto incluye una **precarga de usuario** con las siguientes credenciales 
 
 ## 📂 Estructura de carpetas
 
-/src
+src
+
 config: Acceso a datos, swagger, variables de entorno
 controllers: Controladores, tanto de métodos de pokemon como de usuarios
 middleware: Protege rutas privadas

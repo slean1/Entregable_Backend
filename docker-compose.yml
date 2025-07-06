@@ -1,0 +1,47 @@
+version: '3.8'
+
+services:
+  #################################################
+  # 1) Servicio: MongoDB Community Server
+  #################################################
+  mongodb:
+    image: mongodb/mongodb-community-server:latest  # Imagen oficial
+    container_name: entrega-mongodb
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin    # Usuario root
+      MONGO_INITDB_ROOT_PASSWORD: admin    # Contraseña root
+      MONGO_INITDB_DATABASE: pokedex       # Base de datos inicial (opcional)
+    ports:
+      - '27017:27017'                      # Mapea puerto host:contenedor
+    volumes:
+      - mongodb-data:/data/db              # Persistencia de datos
+    networks:
+      - backend-network                    # Red compartida
+
+  #################################################
+  # 2) Servicio: API Node.js 22
+  #################################################
+  api:
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    volumes:
+      - ./api:/usr/src/app 
+    container_name: api-node
+    restart: on-failure
+    env_file:
+      - ./api/.env
+    ports:
+      - '3000:3000'
+    depends_on:
+      - mongodb
+    networks:
+      - backend-network
+
+volumes:
+  mongodb-data:
+
+networks:
+  backend-network:
+    driver: bridge

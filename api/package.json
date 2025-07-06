@@ -1,0 +1,33 @@
+{
+  "name": "resources",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "npm run seed && nodemon src/server.js",
+    "start": "node src/server.js",
+    "seed": "node scripts/seed.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "knex": "^3.1.0",
+    "mongoose": "^8.14.3",
+    "node-fetch": "^3.3.2",
+    "pg": "^8.16.0",
+    "swagger-jsdoc": "^6.2.8"
+  },
+  "devDependencies": {
+    "install": "^0.13.0",
+    "nodemon": "^3.1.10",
+    "npm": "^11.4.1",
+    "swagger-autogen": "^2.23.7",
+    "swagger-ui-express": "^5.0.1"
+  }
+}

@@ -15,10 +15,15 @@ El proyecto incluye una **precarga de usuario** con las siguientes credenciales 
 src
 
 config: Acceso a datos, swagger, variables de entorno
+
 controllers: Controladores, tanto de métodos de pokemon como de usuarios
+
 middleware: Protege rutas privadas
+
 models: Estructura de bdd
+
 services: Lógica de negocio de la aplicación
+
 repositories: definición de funciones para interacción con bdd
 
 

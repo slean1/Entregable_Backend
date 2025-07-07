@@ -3,10 +3,7 @@
 ## 📌 Descripción
 
 Esta API está construida en **Node.js**, utilizando **MongoDB** como motor de base de datos.  
-El proyecto incluye una **precarga de usuario** con las siguientes credenciales de prueba:
-
-- **Usuario:** `ereyesm@gmail.com`
-- **Password:** `123PAssword456`
+El proyecto incluye una **precarga de usuario**
 
 ---
 
